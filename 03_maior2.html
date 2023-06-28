@@ -5,10 +5,17 @@
 
     //Entrada
 
+    const num1 = parseInt(prompt('Informe um numero inteiro.'));
+    const num2 = parseInt(prompt('Informe segundo numero intero'));
+
     
     //Processamento
 
+    let mensagemFinal = (num1 > num2) ? "O primeiro numero informado é maior que o segundo numero" : (num1 == num2) ? "Os numero sao iguais" : "o segundo numero informado é maior que o primiero";
+
     
     //Saída
+
+    document.write(mensagemFinal);
     
 </script>
