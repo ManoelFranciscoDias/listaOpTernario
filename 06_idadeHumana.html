@@ -9,10 +9,20 @@
 
     //Entrada
 
+    const porte = prompt(`Informe qual é o porte de seu cachorro (P - pequeno || M - medio || G - grande)`).trim().toUpperCase();
+    const idade = parseInt(prompt(`Informe qual é a idade de seu cachorro?`).trim());
+
 
     //Processamento
 
+    let mensagemFinal = (porte === "P") ? `A idade de seu cachoro de acordo com o porte é ${idade * 5}`
+    : (porte === "M") ? `A idade de seu cachorro de acordo com seu porte  é ${idade * 6}`
+    : (porte === "G") ? `A idade de seu cachorro de acordo com seu porte é ${idade * 7}`
+    : `Erro!`;
+
     
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>

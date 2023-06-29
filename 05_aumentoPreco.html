@@ -14,14 +14,16 @@
 
     //Processamento
 
-    const v280 = valor * 1.20;
-    const v700 = valor * 1.15;
-    const v1500 = valor * 1.10;
-    const v1501 = valor * 1.05;
 
-    let mensagemFinal = ()
+    let mensagemFinal = (valor <= 280) ? `O aumento de 20% do produto sera de R$${(valor * 0.20).toFixed(2).replace(".",",")}` 
+    : (valor <= 700) ? `O aumento de 15% do produto sera de R$${(valor * 0.15).toFixed(2).replace(".",",")}`
+    : (valor <= 1500) ? `O aumento de 10% do produto sera de R$${(valor * 0.10).toFixed(2).replace(".",",")}`
+    : (valor > 1500) ? `O aumento de 5% do produto sera de R$${(valor * 0.05).toFixed(2).replace(".",",")}`
+    : `Informe o preço corretamente`;
 
     
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>
