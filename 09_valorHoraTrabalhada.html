@@ -9,13 +9,31 @@
 
     //Entrada
 
-    const horaTrabalhada = parseFloat(prompt(`Informe a quantidade de horas trabalhada semanalmente?`).trim().replace(",","."));
-    const recebe = parseInt(prompt(`Quanto voce recebe por hora trabalhada?`))
-
+    let horaTrabalhada = parseFloat(prompt(`Informe a quantidade de horas trabalhada semanalmente.`).trim().replace(",","."));
+    let recebe = parseFloat(prompt(`Quanto você recebe por hora trabalhada?`).trim().replace(",","."));
 
     //Processamento
 
+   let salario60 = ((horaTrabalhada * recebe) * (1.20));
+   let horas60 = (salario60 / horaTrabalhada);
+
+   let salario601 = ((horaTrabalhada * recebe) * (1.30));
+   let horas601 = (salario601 / horaTrabalhada);
+
+    
+
+
+    let mensagemFinal = (horaTrabalhada <= 45) ? `O salário final sera de R$${(horaTrabalhada * recebe).toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada é R$${recebe.toFixed(2).replace(".",",")}.`
+    : (horaTrabalhada <= 60) ? `O salario final sera de R$${salario60.toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada apos o acréscimo sera de R$${horas60.toFixed(2).replace(".",",")}.`
+    : (horaTrabalhada > 60) ? `O salario final sera de R$${salario601.toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada apos o acréscimo sera de R$${horas601.toFixed(2).replace(".",",")}.`
+    : "Erro!"
+    
+
+
+
     
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>

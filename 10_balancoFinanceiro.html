@@ -11,10 +11,25 @@
 
     //Entrada
 
+    let money = parseFloat(prompt(`Quanto você recebe de salário?`).trim().replace(",","."));
+    let water = parseFloat(prompt(`Quanto você gasta de despesas com água?`).trim().replace(",","."));
+    let energy = parseFloat(prompt(`Quanto você gasta de despesas com energia?`).trim().replace(",","."));
+    let telephone = parseFloat(prompt(`Quanto você gasta de despesas com telefone?`).trim().replace(",","."));
+    let supermarket = parseFloat(prompt(`Quanto você gasta de despesascom supermercado?`).trim().replace(",","."));
+
 
     //Processamento
+
+    let calculo = (water + energy + telephone + supermarket);
+
+    let mensagemFinal = (money >= calculo) ? `O seu salario é o suficiente para pagar as contas e sobrou R$${(money - calculo).toFixed(2).replace(".",",")}`
+    : (calculo > money) ? `O seu salario não é o suficiente para pagar as contas falta R$${(calculo - money).toFixed(2).replace(".",",")}`
+    : `Erro!`;
 
     
     //Saída
     
+    document.write(mensagemFinal);
+
+
 </script>
