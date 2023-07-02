@@ -26,7 +26,7 @@
     let mensagemFinal = (horaTrabalhada <= 45) ? `O salário final sera de R$${(horaTrabalhada * recebe).toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada é R$${recebe.toFixed(2).replace(".",",")}.`
     : (horaTrabalhada <= 60) ? `O salario final sera de R$${salario60.toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada apos o acréscimo sera de R$${horas60.toFixed(2).replace(".",",")}.`
     : (horaTrabalhada > 60) ? `O salario final sera de R$${salario601.toFixed(2).replace(".",",")}, e o preço de cada hora trabalhada apos o acréscimo sera de R$${horas601.toFixed(2).replace(".",",")}.`
-    : "Erro!"
+    : "Erro!";
     
 
 

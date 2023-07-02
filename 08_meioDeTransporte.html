@@ -8,16 +8,16 @@
     //Entrada
 
     const litro = parseFloat(prompt(`Insira qual é o preço do combustivel?`).trim().replace(",","."));
-    const trabalho = parseFloat(prompt(`Informe qual é a quantia de litros que voce ultiliza para ir ao trabalho?`).trim().replace(",","."));
+    const trabalho = parseFloat(prompt(`Informe qual é a quantia de litros que você ultiliza para ir ao trabalho?`).trim().replace(",","."));
 
-    const transporte = parseInt(prompt(`Se voce ultilizar o transporte publico para ir ao trabalho, quanto voce gastaraia?`).trim().replace(",","."));
+    const transporte = parseInt(prompt(`Se você ultilizar o transporte público para ir ao trabalho, quanto você gastaraia?`).trim().replace(",","."));
 
 
     //Processamento
 
     const calculo = (litro * trabalho);
 
-    let mensagemFinal = (transporte < calculo) ? `O transporte publico é o mais barato para ir ao trabalho` : (transporte > calculo) ? `Ir de carro é o mais barato para ir ao trabalho` : `Erro!`;
+    let mensagemFinal = (transporte < calculo) ? `O transporte público é o mais barato para ir ao trabalho` : (transporte > calculo) ? `Ir de carro é o mais barato para ir ao trabalho` : `Erro!`;
 
     
     //Saída
